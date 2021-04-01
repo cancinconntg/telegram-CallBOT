@@ -6,7 +6,7 @@ from bot.zzlib import SimplifiedUser, expand_commands, text_mention
 
 
 def all_mentions(client, chat_id):
-    members = client.get_chat_members(chat_id, offset=0, limit=200)
+    members = client.get_chat_members(chat_id, offset=0, limit=500)
     users = [
         SimplifiedUser(uid=member.user.id, fname=member.user.first_name)
         for member in members
